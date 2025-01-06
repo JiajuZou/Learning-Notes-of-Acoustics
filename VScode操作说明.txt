@@ -1,0 +1,8 @@
+Ctrl n新建，Ctrl s保存，类型选LaTeX
+alt+b 编译，
+alt+shift+z 查看编译日志，
+ctrl+alt+v 预览 PDF，
+alt+e 选择编译方式，
+alt+shift+p 编译 pdflatex 和 bibtex，
+alt+shift+x 编译 xelatex 和 bibtex，
+alt+s 正向搜索，双击 PDF 反向搜索，
