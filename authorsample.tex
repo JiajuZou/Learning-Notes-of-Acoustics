@@ -100,6 +100,52 @@ Here we list some common perturbation pressures in our daily life, which can hel
 
 \noindent 
 \textbf{Sound Pressure Level (SPL)}
+\[
+\text{SPL} = 20 \log_{10} \left( \frac{ \sqrt{\overline{p'^2}} }{2 \times 10^{-5} \text{Pa}} \right) \, \text{dB}
+\]
+Remarks:\\
+\textbullet\ $p'$ is the pressure perturbation. \\
+\textbullet\ $\sqrt{\overline{p'^2}}  $ is the root mean square of pressure perturbation, which can also be noted as $ p_{rms}$. \\
+\textbullet\ As you can notice, the bottom part of the fraction is the value we human can just feel the sound at 1000Hz. \\
+\textbullet\ If you do some acoustic measurement, the data you obtained throuth microphone is time domian signal, you have to do Fourier Transform (FT) to get the frequency domain result. (Actually, author is still trying to figure out this step, and there are some problems author can not explain very clearly... You can refer to section 1.2 to learn more about this step. The textbook \textit{Signals and Systems} is strongly suggested, which is the course the author missed as an undergraduate... )\\
+\textbullet\ If the time domain signal $ p’ $ is simple harmonic, then you can also get $ p_{rms} $ through the following equation: 
+\begin{center}
+$ p_{rms} = p_e = \sqrt{\frac{1}{T} \int_{0}^{T}  p'^2\,dt } $
+\end{center}
+where $ p_e $ is the effective pressure.\\
+
+\begin{legaltext}{Example 1.1}
+\indent 
+Consider two sound sources, amplitudes A and B, angular frequency $\omega_1 $ and $\omega_2 $, phase difference $ \sigma $ , SPL 85dB and 80dB. Let's have a look at the SPL at a given point in this sound field. \\
+
+\noindent 
+Source 1: $ p'_1 $ = $ Acos(\omega_1t) $ \\
+Source 2: $ p'_2 $ = $ Bcos(\omega_2t + \sigma) $ \\
+Total: $ p' $ = $ Acos(\omega_1t) + Bcos(\omega_2t + \sigma) $ \\
+(We can add the two equation directly since the  linear sound wave assumption) \\
+
+\noindent 
+Square:
+\begin{center}
+$ p'^2 $=$ A^2cos^2(\omega_1t) + B^2cos^2(\omega_2t + \sigma) +AB[cos(\omega_1t+\omega_2t+\sigma) + cos(\omega_1t-\omega_2t-\sigma)] $ \\
+\end{center}
+Time Average: 
+\begin{center}
+$ \overline{p'^2} $ = $ \frac{1}{T} \int_{0}^{T}  p'^2\,dt $ = $ \frac{1}{2}A^2 + \frac{1}{2}B^2 + AB\overline{[\dots]}$
+\end{center}
+
+\begin{enumerate}
+    \item If $ \omega_1 \neq \omega_2 $, $ AB\overline{[\dots]} = 0 $.
+    \item If $ \omega_1 = \omega_2 $, $ AB\overline{[\dots]} = ABcos(\sigma) $
+\end{enumerate}
+
+You can also assume more conditions to make this problem more detailed, such as identical sound waves, only a single wave etc, and we promise you can find something interesting and useful.
+\end{legaltext}
+
+\label{sec:1}
+\subsection{Sound Spectra}
+\label{subsec:2}
+
 
 
 Use the template \emph{chapter.tex} together with the document class SVMono (monograph-type books) or SVMult (edited books) to style the various elements of your chapter content.
@@ -363,6 +409,7 @@ If you want to emphasize complete paragraphs of texts in an \verb|Overview| we r
 use  \begin{verbatim}\begin{overview}{Overview}
 ...
 \end{overview}\end{verbatim}
+
 \end{overview}
 \begin{backgroundinformation}{Background Information}
 If you want to emphasize complete paragraphs of texts in an \verb|Background|

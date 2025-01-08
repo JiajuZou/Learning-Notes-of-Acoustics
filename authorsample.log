@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  6 JAN 2025 15:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  8 JAN 2025 20:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -522,7 +522,14 @@ File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 31.
- (./authorsample.aux)
+ (./authorsample.aux
+
+LaTeX Warning: Label `sec:1' multiply defined.
+
+
+LaTeX Warning: Label `subsec:2' multiply defined.
+
+)
 \openout1 = `authorsample.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 31.
@@ -640,117 +647,140 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
  []
 
 
-Overfull \hbox (9.73215pt too wide) in paragraph at lines 105--107
-[]\OT1/minntx/m/n/10 Use the tem-plate \OT1/ntxtlf/m/it/10 chap-ter.tex \OT1/minntx/m/n/10 to-gether with the doc-u-ment class SV-Mono (monograph-
- []
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 111.
 
 [2{d:/Program Files/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for OT1+ntxtt on input line 120.
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Overfull \hbox (3.0pt too wide) detected at line 117
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
+
+ []
+
+[3]
+LaTeX Font Info:    Trying to load font information for OT1+ntxtt on input line 166.
  (d:/Program Files/texlive/2024/texmf-dist/tex/latex/newtx/ot1ntxtt.fd
 File: ot1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/ntxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 120.
+(Font)              scaled to size 10.0pt on input line 166.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.20496pt on input line 126.
+(Font)              scaled to size 6.20496pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/ntxtt/m/n' will be
-(Font)              scaled to size 8.5pt on input line 126.
+(Font)              scaled to size 8.5pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.5pt on input line 126.
+(Font)              scaled to size 8.5pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
-(Font)              scaled to size 8.5pt on input line 126.
+(Font)              scaled to size 8.5pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.5pt on input line 147.
-<figure.pdf, id=15, 139.52126pt x 195.73125pt>
-File: figure.pdf Graphic file (type pdf)
-<use figure.pdf>
-Package pdftex.def Info: figure.pdf  used on input line 163.
-(pdftex.def)             Requested size: 90.68773pt x 127.22379pt.
- [3] [4 <./figure.pdf>]
+(Font)              scaled to size 8.5pt on input line 193.
+ [4]
+<figure.pdf, id=26, 139.52126pt x 195.73125pt>
 File: figure.pdf Graphic file (type pdf)
 <use figure.pdf>
 Package pdftex.def Info: figure.pdf  used on input line 209.
 (pdftex.def)             Requested size: 90.68773pt x 127.22379pt.
+ [5 <./figure.pdf>]
+File: figure.pdf Graphic file (type pdf)
+<use figure.pdf>
+Package pdftex.def Info: figure.pdf  used on input line 255.
+(pdftex.def)             Requested size: 90.68773pt x 127.22379pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.0pt on input line 215.
+(Font)              scaled to size 10.0pt on input line 261.
 
-Overfull \hbox (0.61853pt too wide) in paragraph at lines 228--239
+Overfull \hbox (0.61853pt too wide) in paragraph at lines 274--285
 [][]
  []
 
-[5] [6]
-Overfull \hbox (3.0pt too wide) detected at line 313
+[6] [7]
+Overfull \hbox (3.0pt too wide) detected at line 359
  [] 
  []
 
 LaTeX Font Info:    Font shape `TS1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 320.
-LaTeX Font Info:    Trying to load font information for OT1+qhv on input line 320.
+(Font)              scaled to size 10.0pt on input line 366.
+LaTeX Font Info:    Trying to load font information for OT1+qhv on input line 366.
 (d:/Program Files/texlive/2024/texmf-dist/tex/latex/tex-gyre/ot1qhv.fd
 File: ot1qhv.fd 2009/09/25 v1.2 font definition file for OT1/qhv
 )
-Overfull \hbox (3.0pt too wide) detected at line 320
+Overfull \hbox (3.0pt too wide) detected at line 366
  [] 
  []
 
-[7{d:/Program Files/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}]
-Overfull \hbox (3.0pt too wide) detected at line 327
- [] 
- []
-
-
-Overfull \hbox (3.0pt too wide) detected at line 334
+[8] [9{d:/Program Files/texlive/2024/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}]
+Overfull \hbox (3.0pt too wide) detected at line 373
  [] 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 341
+Overfull \hbox (3.0pt too wide) detected at line 380
  [] 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 353
- [] 
- []
-
-[8]
-Overfull \hbox (3.0pt too wide) detected at line 361
+Overfull \hbox (3.0pt too wide) detected at line 387
  [] 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 367
+Overfull \hbox (3.0pt too wide) detected at line 399
+ [] 
+ []
+
+[10]
+Overfull \hbox (3.0pt too wide) detected at line 407
  [] 
  []
 
 
-Overfull \hbox (3.0pt too wide) detected at line 378
+Overfull \hbox (3.0pt too wide) detected at line 414
  [] 
  []
 
-(./references.tex [9] [10])
+
+Overfull \hbox (3.0pt too wide) detected at line 425
+ [] 
+ []
+
+(./references.tex [11] [12])
 \tf@thm=\write5
 \openout5 = `authorsample.thm'.
 
- [11] (./authorsample.aux)
+ [13] (./authorsample.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 8668 strings out of 474116
- 124912 string characters out of 5747718
+ 8670 strings out of 474116
+ 124974 string characters out of 5747718
  1938190 words of memory out of 5000000
- 30853 multiletter control sequences out of 15000+600000
+ 30855 multiletter control sequences out of 15000+600000
  619105 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,12n,93p,709b,350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI5.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qhvb.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmb.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/txexs.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/txfonts/txtt.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><d:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on authorsample.pdf (11 pages, 246239 bytes).
+Output written on authorsample.pdf (13 pages, 254346 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
