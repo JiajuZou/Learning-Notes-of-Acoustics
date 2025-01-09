@@ -15,6 +15,8 @@
 \usepackage{multicol}        % used for the two-column index
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
+\usepackage{graphicx}
+
 
 \usepackage{newtxtext}       % 
 \usepackage{newtxmath}       % selects Times Roman as basic font
@@ -145,51 +147,120 @@ You can also assume more conditions to make this problem more detailed, such as 
 \label{sec:1}
 \subsection{Sound Spectra}
 \label{subsec:2}
+\begin{center}
+Spectral Analysis $ \Rightarrow $ Total Composition of Sound \\
+Fourier transform (FT) is the key point.
+\end{center} 
 
+As mentioned before, if you do some acoustic measurement, the data you obtained through the microphone is a time-domain signal, you have to do Fourier Transform to get the frequency domain result. 
 
+In this section, we will discuss this process in detail based on the author's understanding and knowledge. 
 
-Use the template \emph{chapter.tex} together with the document class SVMono (monograph-type books) or SVMult (edited books) to style the various elements of your chapter content.
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text.  Further on please use the \LaTeX\ automatism for all your cross-references and citations. And please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
+It's warmly welcomed to share your ideas and methods with us through the e-mail on the first page $ \text{:)} $
 
-\section{Section Heading}
+Now we list two equations as follows:
+\begin{center}
+$ F(\omega ) =  \int_{-\infty}^{+\infty} s(t)e^{i\omega t} \,dt  $ \\
+$ s(t) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega)e^{i\omega t} \,d\omega  $
+\end{center}
+
+$  F(\omega ) $ is harmonic element, 
+
+$ s(t) $ is signal function. \\
+
+\begin{legaltext}{Example 1.2}
+\indent 
+Suppose one harmonic signal: $ s(t)=Ie^{i\omega_0 t} $ \\
+\indent 
+Its harmonic element: $ F(\omega )=I \int_{-\infty}^{+\infty} e^{i(\omega_0-\omega) t} \,dt = I\cdot2\pi\delta(\omega_0-\omega)$
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]
+    {Fig.1.2.1.jpg} % 替换为你的图片文件名
+    \caption{Harmonic signal and its element}
+    \label{fig:example}
+\end{figure}
+
+In this example, we used the property of Delta-Function:
+\begin{center}
+$ \int_{-\infty}^{+\infty}g(t)\delta(t-t_0) \,dt = g(t_0) $ for $ \forall g(t) $
+\end{center}
+
+Do FT to the impulse signal $ I\delta(t-t_0)$ and use the above property, we can get:
+\begin{center}
+    $ F(\omega) = Ie^{-i\omega t_0} $
+\end{center} 
+
+Then, the following result can be derived:
+\begin{center}
+    $ s(t) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} F(\omega)e^{i\omega t} \,d\omega  $ \\
+    $ \delta(t-t_0) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} e^{i\omega (t-t_0)} \,d\omega  $
+\end{center}
+
+\end{legaltext}
+
+\section{Sound Wave Equations}
 \label{sec:2}
-% Always give a unique label
-% and use \ref{<label>} for cross-references
-% and \cite{<label>} for bibliographic references
-% use \sectionmark{}
-% to alter or adjust the section heading in the running head
 
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text.  Further on please use the \LaTeX\ automatism for all your cross-references and citations.
-
-Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
-
-Use the standard \verb|equation| environment to typeset your equations, e.g.
-%
-\begin{equation}
-a \times b = c\;,
-\end{equation}
-%
-however, for multiline equations we recommend to use the \verb|eqnarray| environment\footnote{In physics texts please activate the class option \texttt{vecphys} to depict your vectors in \textbf{\itshape boldface-italic} type - as is customary for a wide range of physical subjects}.
-\begin{eqnarray}
-\left|\nabla U_{\alpha}^{\mu}(y)\right| &\le&\frac1{d-\alpha}\int
-\left|\nabla\frac1{|\xi-y|^{d-\alpha}}\right|\,d\mu(\xi) =
-\int \frac1{|\xi-y|^{d-\alpha+1}} \,d\mu(\xi)  \\
-&=&(d-\alpha+1) \int\limits_{d(y)}^\infty
-\frac{\mu(B(y,r))}{r^{d-\alpha+2}}\,dr \le (d-\alpha+1)
-\int\limits_{d(y)}^\infty \frac{r^{d-\alpha}}{r^{d-\alpha+2}}\,dr
-\label{eq:01}
-\end{eqnarray}
-
-\subsection{Subsection Heading}
+\subsection{One-Dimensional Wave Equation}
 \label{subsec:2}
-Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text.  Further on please use the \LaTeX\ automatism for all your cross-references\index{cross-references} and citations\index{citations} as has already been described in Sect.~\ref{sec:2}.
+In the section we will discuss the following situation of sound pressure perturbation:
+\begin{center}
+    $ p'=p'(x,t)$
+\end{center}
+Note that there is \textbf{ no bold} in the body of $ x $, which means $ x $ is only a scalar, and only one direction(for example, the plane wave). \\
 
-\begin{quotation}
-Please do not use quotation marks when quoting texts! Simply use the \verb|quotation| environment -- it will automatically be rendered in line with the preferred layout.
-\end{quotation}
+We can obtain the following equation by combining the continuity equation of mass and momentum(ignore the viscous effect in sound waves):
+\begin{center}
+    $ \frac{\partial^2 \rho'}{\partial t^2} - \frac{\partial^2 p'}{\partial x^2} = 0 $
+\end{center}
+
+Then we have to consider the equations of thermodynamics. The speed of heat transfer is much lower than the speed of the volume change in the process of sound propagation, therefore we can regard this process as adiabatic, the pressure is only the function of density:
+\begin{center}
+    $ P=P(\rho)$
+\end{center}
+
+Expansion and linearization:
+\begin{center}
+    $ P=P_0 + (\rho - \rho_0)\frac{dP}{d\rho}(\rho_0) + ... $ \\
+    $ \Downarrow $ \\ 
+    $ P-P_0 = (\rho - \rho_0)\frac{dP}{d\rho}(\rho_0)$ \\
+    $ \Downarrow $ \\ 
+    $ p' = \rho'\frac{dP}{d\rho}(\rho_0)$
+\end{center}
+
+Introduce a new constant:
+\begin{center}
+    $ c^2 = \frac{dP}{d\rho}(\rho_0) = \frac{p'}{\rho'}$\\
+    sound speed $ c $ \\
+    $ p'$ travels with constant speed $ c $
+\end{center}
+
+Finally we can get:
+\begin{center}
+    $ \frac{1}{c^2} \frac{\partial^2 p'}{\partial t^2} - \frac{\partial^2 p'}{\partial x^2} = 0 $ \\
+    1-D wave equation
+\end{center}
 
 
-\subsubsection{Subsubsection Heading}
+General solution:
+\begin{center}
+    $ p'(x,t) = f(x-ct) +g(x+ct) $ \\
+    $ f(x-ct) $ propagating to the right($ t\uparrow, x\uparrow$) \\
+    $ g(x+ct) $ propagating to the left($ t\uparrow, x\downarrow $)
+\end{center}
+
+Harmonic Waves:
+\begin{center}
+    $ p'(x,t) = Ae^{i\omega (t-x/c)} + Be^{i\omega (t+x/c)}$ \\
+    Only real part is meaningful.
+\end{center}
+
+
+The derivation of the 1-D wave equation is based on some assumptions(\textbf{inviscid, adiabatic, small perturbation}), and the result can be refered to as linear acoustics, which is still useful under lots of situations.
+
+\subsubsection{Acoustic Particle velocity}
 Instead of simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text.  Further on please use the \LaTeX\ automatism for all your cross-references and citations as has already been described in Sect.~\ref{subsec:2}, see also Fig.~\ref{fig:1}\footnote{If you copy text passages, figures, or tables from other works, you must obtain \textit{permission} from the copyright holder (usually the original publisher). Please enclose the signed permission with the manuscript. The sources\index{permission to print} must be acknowledged either in the captions, as footnotes or in a separate section of the book.}
 
 Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.
